@@ -23,7 +23,6 @@ const Vacation = () => {
     console.log(values);
     resetForm();
   };
-
   return (
     <div className="vacation">
       <h1>Your Vacation🌴</h1>
