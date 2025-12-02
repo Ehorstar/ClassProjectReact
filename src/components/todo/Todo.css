@@ -1,0 +1,40 @@
+.todo {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.todo-filter {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px #ddd solid;
+}
+
+.remove-btn {
+  margin-left: auto;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}

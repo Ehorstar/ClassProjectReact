@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: #333;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+nav a.active {
+  opacity: 1;
+  background-color: cadetblue;
+  border-radius: 5px;
+}
+
+.theme-dark{
+  background-color: #333;
+  color:#fff
+}
+
+.theme-dark header{
+  background-color: #222;
+}
+
+.home{
+  text-align: center;
+}
+
+.registration{
+  text-align: center;
+}
+
+.vacation {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.passenger-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.passenger input {
+  width: 100%;
+}

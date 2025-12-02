@@ -1,0 +1,17 @@
+.btn-icon{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: azure;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon:hover{
+    background-color: rgb(104, 160, 161);
+}
