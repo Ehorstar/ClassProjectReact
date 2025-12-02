@@ -12,11 +12,13 @@ import TodoItem from "./TodoItem";
 import list from "./data";
 import TaskReducer from "../../reducers/TaskReducer";
 import I18nContext from "../../contexts/I18nContext";
+import ThemeContext from "../../contexts/ThemeContext";
 
 const ToDoList = () => {
   const [tasks, dispatch] = useReducer(TaskReducer, list);
   const [activeFilter, setActiveFilter] = useState("All tasks");
   const { currentTexts, currentLang, changeLang } = useContext(I18nContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const tasksFromStorage = localStorage.getItem("tasks");
@@ -36,7 +38,11 @@ const ToDoList = () => {
       changeLang(savedLang);
     }
 
-  }, []);
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme && savedTheme !== theme) {
+      toggleTheme();
+    }
+  }, [changeLang, theme, toggleTheme]);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -49,6 +55,10 @@ const ToDoList = () => {
   useEffect(() => {
     localStorage.setItem("lang", currentLang);
   }, [currentLang]);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   
   const addTask = useCallback((title) => {
     dispatch({

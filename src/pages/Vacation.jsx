@@ -1,12 +1,14 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import React from "react";
+import React, { useContext } from "react";
 import * as Yup from "yup";
+import translations from "../Translations/Translation";
+import I18nContext from "../contexts/I18nContext";
 
 const initialValues = {
   date: "",
   dateReturn: "",
   amount: "1",
-  name: "", 
+  name: "",
   age: "",
 };
 
@@ -19,13 +21,15 @@ const validationSchema = Yup.object().shape({
 });
 
 const Vacation = () => {
+  const { currentTexts } = useContext(I18nContext);
+
   const submitHandler = (values, { resetForm }) => {
     console.log(values);
     resetForm();
   };
   return (
     <div className="vacation">
-      <h1>Your Vacation🌴</h1>
+      <h1>{currentTexts.vacationtitle}</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={submitHandler}
@@ -34,13 +38,13 @@ const Vacation = () => {
         {() => (
           <Form>
             <div>
-              <label>День виїзду: </label>
+              <label>{currentTexts.departureday}</label>
               <Field type="date" name="date" />
               <ErrorMessage name="date" component="div" className="error" />
             </div>
 
             <div>
-              <label>День повернення: </label>
+              <label>{currentTexts.returnday}</label>
               <Field type="date" name="dateReturn" />
               <ErrorMessage
                 name="dateReturn"
@@ -50,7 +54,7 @@ const Vacation = () => {
             </div>
 
             <div>
-              <label>Кількість осіб: </label>
+              <label>{currentTexts.peopleamout}</label>
               <Field as="select" name="amount">
                 <option value="1">1 person</option>
                 <option value="2">2 people</option>
@@ -66,20 +70,20 @@ const Vacation = () => {
                 <Field
                   type="text"
                   name="name"
-                  placeholder="Enter your full name"
+                  placeholder={currentTexts.name}
                 />
 
                 <ErrorMessage name="name" component="div" className="error" />
               </div>
 
               <div className="passenger">
-                <Field type="text" name="age" placeholder="Enter your age" />
+                <Field type="text" name="age" placeholder={currentTexts.age} />
 
                 <ErrorMessage name="age" component="div" className="error" />
               </div>
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit">{currentTexts.addvacation}</button>
           </Form>
         )}
       </Formik>

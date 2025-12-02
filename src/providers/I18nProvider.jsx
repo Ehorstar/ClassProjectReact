@@ -3,12 +3,15 @@ import I18nContext from "../contexts/I18nContext";
 import translations from "../Translations/Translation";
 
 const I18nProvider = ({ children }) => {
-  const [currentLang, setCurrentLang] = useState("en");
+  const [currentLang, setCurrentLang] = useState(
+    localStorage.getItem("lang") || "en"
+  );
 
   const changeLang = (lang) => {
     if (translations[lang]) {
       setCurrentLang(lang);
-    };
+      localStorage.setItem("lang", lang);
+    }
   };
 
   const contextValue = {
@@ -21,5 +24,6 @@ const I18nProvider = ({ children }) => {
     <I18nContext.Provider value={contextValue}>{children}</I18nContext.Provider>
   );
 };
+
 
 export default I18nProvider;

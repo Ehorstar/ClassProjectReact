@@ -39,7 +39,7 @@ nav a.active {
 
 .theme-dark{
   background-color: #333;
-  color:#fff
+  color:#fff;
 }
 
 .theme-dark header{
@@ -58,10 +58,14 @@ nav a.active {
   max-width: 550px;
   margin: 40px auto;
   padding: 24px;
-  background: #fff;
+  background: #222;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.08);
   text-align: left;
+}
+
+.theme-light .vacation{
+  background: #fff;
 }
 
 .passenger-row {

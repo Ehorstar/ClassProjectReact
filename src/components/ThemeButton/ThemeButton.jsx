@@ -9,10 +9,11 @@ const ThemeButton = () => {
   return (
     <div>
       <button onClick={toggleTheme} className="btn-icon">
-        {theme === "light" ? <MoonOutlined /> : <SunOutlined />}
+        {theme === "light" ? <SunOutlined /> : <MoonOutlined />}
       </button>
     </div>
   );
 };
 
 export default ThemeButton;
+ 
