@@ -1,45 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router";
-import ToDoList from "./components/todo/ToDoList";
-import User from "./components/learn/User";
+import { RouterProvider } from "react-router";
 import ThemeProvider from "./providers/ThemeProvider";
 import I18nProvider from "./providers/I18nProvider";
-import Registration from "./pages/Registration";
-import Vacation from "./pages/Vacation";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-
-    children: [
-      {
-        index: true,
-        element: <h1 className="home">Its Home</h1>,
-      },
-      {
-        path: "user",
-        element: <User />,
-      },
-      {
-        path: "registration",
-        element: <Registration />,
-      },
-      {
-        path: "todolist",
-        element: <ToDoList />,
-      },
-      {
-        path: "vacation",
-        element: <Vacation />,
-      },
-    ],
-  },
-]);
+import router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

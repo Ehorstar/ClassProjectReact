@@ -2,6 +2,7 @@ import {
   HomeOutlined,
   RocketOutlined,
   UserAddOutlined,
+  UsergroupAddOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import React from "react";
@@ -17,9 +18,13 @@ const MainMenu = () => {
       <NavLink to="user">
         <UserOutlined />
       </NavLink>
-      
+
       <NavLink to="registration">
         <UserAddOutlined />
+      </NavLink>
+      
+      <NavLink to="users">
+        <UsergroupAddOutlined />
       </NavLink>
 
       <NavLink to="vacation">

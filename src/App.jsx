@@ -17,7 +17,9 @@ function App() {
           <ThemeButton />
         </div>
       </header>
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
     </>
   );
 }

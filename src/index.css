@@ -77,3 +77,22 @@ nav a.active {
 .passenger input {
   width: 100%;
 }
+
+.user-list{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.user-list img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
