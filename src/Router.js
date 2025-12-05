@@ -6,6 +6,8 @@ import ToDoList from "./components/todo/ToDoList";
 import Vacation from "./pages/Vacation";
 import Users from "./pages/Users";
 import { getUsers } from "./loaders/UsersLoaders";
+import Products from "./pages/Products";
+import { getProducts } from "./loaders/ProductLoaders";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,12 @@ const router = createBrowserRouter([
       {
         path: "users",
         element: <Users />,
-        loader: getUsers
+        loader: getUsers,
+      },
+      {
+        path: "products",
+        element: <Products />,
+        loader: getProducts,
       },
     ],
   },

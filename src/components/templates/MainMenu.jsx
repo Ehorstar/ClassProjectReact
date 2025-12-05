@@ -1,6 +1,7 @@
 import {
   HomeOutlined,
   RocketOutlined,
+  UnorderedListOutlined,
   UserAddOutlined,
   UsergroupAddOutlined,
   UserOutlined,
@@ -22,13 +23,17 @@ const MainMenu = () => {
       <NavLink to="registration">
         <UserAddOutlined />
       </NavLink>
-      
+
       <NavLink to="users">
         <UsergroupAddOutlined />
       </NavLink>
 
       <NavLink to="vacation">
         <RocketOutlined />
+      </NavLink>
+
+      <NavLink to="products">
+        <UnorderedListOutlined />
       </NavLink>
     </nav>
   );
