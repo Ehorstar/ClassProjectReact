@@ -1,4 +1,4 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik, FieldArray } from "formik";
 import React, { useContext } from "react";
 import * as Yup from "yup";
 import translations from "../Translations/Translation";
@@ -8,8 +8,12 @@ const initialValues = {
   date: "",
   dateReturn: "",
   amount: "1",
-  name: "",
-  age: "",
+  passengers: [
+    {
+      name: "",
+      age: "",
+    },
+  ],
 };
 
 const validationSchema = Yup.object().shape({
