@@ -4,10 +4,11 @@ import Registration from "./pages/Registration";
 import ToDoList from "./components/todo/ToDoList";
 import Vacation from "./pages/Vacation";
 import Users from "./pages/Users";
-import { getUser, getUsers } from "./loaders/UsersLoaders";
+import { getSearchUsers, getUser, getUsers } from "./loaders/UsersLoaders";
 import Products from "./pages/Products";
 import { getProducts } from "./loaders/ProductLoaders";
 import User from "./pages/User";
+import Search from "./pages/Search";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,12 @@ const router = createBrowserRouter([
       {
         path: "users/:login",
         loader: getUser,
-        element: <User />
+        element: <User />,
+      },
+      {
+        path: "search",
+        loader: getSearchUsers,
+        element: <Search />,
       },
     ],
   },

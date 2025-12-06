@@ -1,21 +1,26 @@
 import React from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useSearchParams } from "react-router-dom";
+import Search from "../components/search/Search";
 
 const Users = () => {
   const users = useLoaderData();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const filterUsers=(user)=>{
+    if(!searchParams.get('q')) return true;
+    return user.login.toLowerCase().includes(searchParams.get('q'))
+  };
 
   return (
     <div>
       <div className="users-title">
         <h1>Users</h1>
-        <div>
-          <input type="text" placeholder="Search.."/>
-        </div>
+        <Search />
       </div>
-      
+
       <div className="user-list">
-        {users.map((user) => (
+        {users.filter(filterUsers).map((user) => (
           <div key={user.id}>
             <img
               src={user.avatar_url}

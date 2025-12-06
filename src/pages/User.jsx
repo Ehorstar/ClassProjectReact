@@ -6,7 +6,7 @@ const User = () => {
 
   return (
     <div>
-      <h1>{user.login}</h1>
+      <h1>{user.login}-{user.name}</h1>
       <p>Bio: {user.bio}</p>
       <p>
         Blog:{" "}
