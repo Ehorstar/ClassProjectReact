@@ -1,6 +1,6 @@
 import { MessageFilled, StarFilled, StarOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData } from "react-router-dom";
 
 const Products = () => {
   const products = useLoaderData();

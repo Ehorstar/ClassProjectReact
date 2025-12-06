@@ -4,20 +4,15 @@ import {
   UnorderedListOutlined,
   UserAddOutlined,
   UsergroupAddOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
 import React from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const MainMenu = () => {
   return (
     <nav>
       <NavLink to="/">
         <HomeOutlined />
-      </NavLink>
-
-      <NavLink to="user">
-        <UserOutlined />
       </NavLink>
 
       <NavLink to="registration">

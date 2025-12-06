@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 import MainMenu from "./components/templates/MainMenu";
 import ThemeButton from "./components/ThemeButton/ThemeButton";
 import { useContext } from "react";

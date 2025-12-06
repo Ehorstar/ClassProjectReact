@@ -1,13 +1,13 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import User from "./components/learn/User";
 import Registration from "./pages/Registration";
 import ToDoList from "./components/todo/ToDoList";
 import Vacation from "./pages/Vacation";
 import Users from "./pages/Users";
-import { getUsers } from "./loaders/UsersLoaders";
+import { getUser, getUsers } from "./loaders/UsersLoaders";
 import Products from "./pages/Products";
 import { getProducts } from "./loaders/ProductLoaders";
+import User from "./pages/User";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +18,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <h1 className="home">Its Home</h1>,
-      },
-      {
-        path: "user",
-        element: <User />,
       },
       {
         path: "registration",
@@ -44,6 +40,11 @@ const router = createBrowserRouter([
         path: "products",
         element: <Products />,
         loader: getProducts,
+      },
+      {
+        path: "users/:login",
+        loader: getUser,
+        element: <User />
       },
     ],
   },
