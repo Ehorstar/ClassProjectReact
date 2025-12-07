@@ -5,3 +5,9 @@ export const getProducts = async () => {
   return response.data;
 };
 
+export const getProduct = async ({ params }) => {
+  const response = await axios.get(
+    "https://fakestoreapi.com/products/" + params.id
+  );
+  return response.data;
+};

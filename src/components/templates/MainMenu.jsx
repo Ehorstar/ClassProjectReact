@@ -1,14 +1,19 @@
 import {
+  CloudOutlined,
   HomeOutlined,
   RocketOutlined,
+  ShoppingCartOutlined,
   UnorderedListOutlined,
   UserAddOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import BasketContext from "../../contexts/BasketContext";
 
 const MainMenu = () => {
+  const { basketCount } = useContext(BasketContext);
+
   return (
     <nav>
       <NavLink to="/">
@@ -22,13 +27,17 @@ const MainMenu = () => {
       <NavLink to="users">
         <UsergroupAddOutlined />
       </NavLink>
+      
+      <NavLink to="products">
+        <UnorderedListOutlined />
+      </NavLink>
 
       <NavLink to="vacation">
         <RocketOutlined />
       </NavLink>
 
-      <NavLink to="products">
-        <UnorderedListOutlined />
+      <NavLink to="weather">
+        <CloudOutlined />
       </NavLink>
     </nav>
   );

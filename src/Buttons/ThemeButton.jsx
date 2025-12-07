@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import ThemeContext from "../../contexts/ThemeContext";
+import ThemeContext from "../contexts/ThemeContext";
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
-import "./ThemeButton.css";
+import "./Button.css";
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -16,4 +16,3 @@ const ThemeButton = () => {
 };
 
 export default ThemeButton;
- 

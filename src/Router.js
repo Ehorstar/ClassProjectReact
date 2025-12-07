@@ -6,9 +6,13 @@ import Vacation from "./pages/Vacation";
 import Users from "./pages/Users";
 import { getSearchUsers, getUser, getUsers } from "./loaders/UsersLoaders";
 import Products from "./pages/Products";
-import { getProducts } from "./loaders/ProductLoaders";
+import { getProduct, getProducts } from "./loaders/ProductLoaders";
 import User from "./pages/User";
 import Search from "./pages/Search";
+import Weather from "./pages/Weather";
+import { getWeather } from "./loaders/WeatherLoaders";
+import ShoppingBasket from "./pages/ShoppingBasket";
+import Product from "./pages/Product";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +47,11 @@ const router = createBrowserRouter([
         loader: getProducts,
       },
       {
+        path: "products/:id",
+        loader: getProduct,
+        element: <Product />,
+      },
+      {
         path: "users/:login",
         loader: getUser,
         element: <User />,
@@ -51,6 +60,15 @@ const router = createBrowserRouter([
         path: "search",
         loader: getSearchUsers,
         element: <Search />,
+      },
+      {
+        path: "weather",
+        loader: getWeather,
+        element: <Weather />,
+      },
+      {
+        path: "basket",
+        element: <ShoppingBasket />,
       },
     ],
   },

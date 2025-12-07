@@ -5,15 +5,18 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import ThemeProvider from "./providers/ThemeProvider";
 import I18nProvider from "./providers/I18nProvider";
+import BasketProvider from "./providers/BasketProvider";
 import router from "./Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <I18nProvider>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </I18nProvider>
+  <BasketProvider>
+    <I18nProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </I18nProvider>
+  </BasketProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
