@@ -2,7 +2,6 @@ import {
   CloudOutlined,
   HomeOutlined,
   RocketOutlined,
-  ShoppingCartOutlined,
   UnorderedListOutlined,
   UserAddOutlined,
   UsergroupAddOutlined,
@@ -12,8 +11,6 @@ import { NavLink } from "react-router-dom";
 import BasketContext from "../../contexts/BasketContext";
 
 const MainMenu = () => {
-  const { basketCount } = useContext(BasketContext);
-
   return (
     <nav>
       <NavLink to="/">
@@ -27,7 +24,7 @@ const MainMenu = () => {
       <NavLink to="users">
         <UsergroupAddOutlined />
       </NavLink>
-      
+
       <NavLink to="products">
         <UnorderedListOutlined />
       </NavLink>
