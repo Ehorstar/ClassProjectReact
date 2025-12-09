@@ -6,9 +6,8 @@ import {
   UserAddOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import BasketContext from "../../contexts/BasketContext";
 
 const MainMenu = () => {
   return (

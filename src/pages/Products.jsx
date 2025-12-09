@@ -43,23 +43,26 @@ const Products = () => {
 
             <div className="product-title">{product.title}</div>
 
-            <div className="product-rating">
-              {renderStars(product.rating.rate)}
-            </div>
-
             <div
-              className="product-rating-count"
-              style={{ display: "flex", gap: "6px" }}
+              className="product-rating"
+              style={{ display: "flex", gap: "4px" }}
             >
+              <div style={{ display: "flex" }}>
+                {renderStars(product.rating.rate)}
+              </div>
+
               <MessageFilled />
               {product.rating.count}
             </div>
 
             <div className="product-price">{product.price}$</div>
 
-            <div>
-              <button onClick={() => addToBasket(product)}>BUY</button>
-            </div>
+            <button
+              className="button-product"
+              onClick={() => addToBasket(product)}
+            >
+              BUY
+            </button>
           </div>
         ))}
         <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>

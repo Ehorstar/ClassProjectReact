@@ -122,3 +122,67 @@ nav a.active {
   justify-content: space-between;
   align-items: center;
 }
+
+.shopping-basket{
+  display: flex;
+}
+
+.product-img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.button-product {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #1677ff;
+  color: white;
+}
+
+button-product:hover {
+  background: #0050b3;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.basket img{
+   width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.basket-item {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.basket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.basket-remove{
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #ff0000;
+  color: white;
+  width: 90px;
+}
+
+.basket-in-cr{
+  padding: 4px 9px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
