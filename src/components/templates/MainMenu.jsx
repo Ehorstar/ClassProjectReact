@@ -1,5 +1,6 @@
 import {
   CloudOutlined,
+  FileTextOutlined,
   HomeOutlined,
   RocketOutlined,
   UnorderedListOutlined,
@@ -34,6 +35,10 @@ const MainMenu = () => {
 
       <NavLink to="weather">
         <CloudOutlined />
+      </NavLink>
+
+      <NavLink to="posts">
+        <FileTextOutlined />
       </NavLink>
     </nav>
   );

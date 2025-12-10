@@ -13,6 +13,7 @@ import Weather from "./pages/Weather";
 import { getWeather } from "./loaders/WeatherLoaders";
 import ShoppingBasket from "./pages/ShoppingBasket";
 import Product from "./pages/Product";
+import Posts from "./pages/Posts";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
         path: "basket",
         element: <ShoppingBasket />,
       },
+      {
+        path: "posts",
+        element: <Posts/>
+      }
     ],
   },
 ]);

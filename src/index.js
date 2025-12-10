@@ -7,16 +7,20 @@ import ThemeProvider from "./providers/ThemeProvider";
 import I18nProvider from "./providers/I18nProvider";
 import BasketProvider from "./providers/BasketProvider";
 import router from "./Router";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BasketProvider>
-    <I18nProvider>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </I18nProvider>
-  </BasketProvider>
+  <Provider store={store}>
+    <BasketProvider>
+      <I18nProvider>
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </I18nProvider>
+    </BasketProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
