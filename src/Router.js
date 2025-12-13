@@ -14,6 +14,7 @@ import { getWeather } from "./loaders/WeatherLoaders";
 import ShoppingBasket from "./pages/ShoppingBasket";
 import Product from "./pages/Product";
 import Posts from "./pages/Posts";
+import Ref from "./pages/Ref";
 
 const router = createBrowserRouter([
   {
@@ -73,8 +74,12 @@ const router = createBrowserRouter([
       },
       {
         path: "posts",
-        element: <Posts/>
-      }
+        element: <Posts />,
+      },
+      {
+        path: "ref",
+        element: <Ref />,
+      },
     ],
   },
 ]);

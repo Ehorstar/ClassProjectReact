@@ -10,12 +10,12 @@ const Search = () => {
     setText(e.target.value);
   };
 
-  useEffect(() => {
-    setSearchParams({ q: text });
-  }, [text]);
+  // useEffect(() => {
+  //   setSearchParams({ q: text });
+  // }, [text]);
 
   const keyDownHandler = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && text.trim() != '') {
         navigate(`/search?q=${text}`)
     }
   };

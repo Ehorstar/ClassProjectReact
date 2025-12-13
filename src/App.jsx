@@ -8,6 +8,7 @@ import { decrement, increment, incrementByAmount } from "./slices/counterSlice";
 import { useEffect } from "react";
 import { getPosts } from "./slices/postsSlice";
 import RegistrationButton from "./Buttons/RegistrationButton";
+import Search from "./components/search/Search";
 
 function App() {
   const counter = useSelector((state) => state.counter.value);
@@ -23,11 +24,7 @@ function App() {
       <header>
         <MainMenu />
         <div>
-          Posts: {data.length}
-          <button onClick={() => dispatch(decrement())}>-</button>
-          <span>{counter}</span>
-          <button onClick={() => dispatch(increment())}>+</button>
-          <button onClick={() => dispatch(incrementByAmount(3))}>+3</button>
+          <Search  />
         </div>
 
         <div style={{ display: "flex", gap: "10px" }}>

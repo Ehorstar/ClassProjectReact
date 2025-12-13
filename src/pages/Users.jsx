@@ -1,6 +1,5 @@
 import React from "react";
 import { useLoaderData, useNavigate, useSearchParams } from "react-router-dom";
-import Search from "../components/search/Search";
 
 const Users = () => {
   const users = useLoaderData();
@@ -16,7 +15,6 @@ const Users = () => {
     <div>
       <div className="users-title">
         <h1>Users</h1>
-        <Search />
       </div>
 
       <div className="user-list">

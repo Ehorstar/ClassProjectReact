@@ -2,6 +2,7 @@ import {
   CloudOutlined,
   FileTextOutlined,
   HomeOutlined,
+  KubernetesOutlined,
   RocketOutlined,
   UnorderedListOutlined,
   UserAddOutlined,
@@ -35,6 +36,10 @@ const MainMenu = () => {
 
       <NavLink to="posts">
         <FileTextOutlined />
+      </NavLink>
+
+      <NavLink to="ref">
+        <KubernetesOutlined />
       </NavLink>
     </nav>
   );
