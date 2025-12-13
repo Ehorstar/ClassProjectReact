@@ -1,13 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BasketContext from "../contexts/BasketContext";
 
 const BasketProvider = ({ children }) => {
-  const [basket, setBasket] = useState([]);
+  const [basket, setBasket] = useState(() => {
+    const saved = localStorage.getItem("basket");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+  }, [basket]);
 
   const addToBasket = (product) => {
     setBasket((prev) => {
       const exist = prev.find((item) => item.id === product.id);
-
+      alert("Product add to basket");
       if (exist) {
         return prev.map((item) =>
           item.id === product.id ? { ...item, count: item.count + 1 } : item

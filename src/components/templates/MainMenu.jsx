@@ -17,10 +17,6 @@ const MainMenu = () => {
         <HomeOutlined />
       </NavLink>
 
-      <NavLink to="registration">
-        <UserAddOutlined />
-      </NavLink>
-
       <NavLink to="users">
         <UsergroupAddOutlined />
       </NavLink>

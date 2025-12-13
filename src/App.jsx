@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, incrementByAmount } from "./slices/counterSlice";
 import { useEffect } from "react";
 import { getPosts } from "./slices/postsSlice";
+import RegistrationButton from "./Buttons/RegistrationButton";
 
 function App() {
   const counter = useSelector((state) => state.counter.value);
@@ -16,7 +17,6 @@ function App() {
   useEffect(() => {
     dispatch(getPosts());
   }, []);
-
 
   return (
     <>
@@ -34,6 +34,7 @@ function App() {
           <BasketButton />
           <LangButton />
           <ThemeButton />
+          <RegistrationButton />
         </div>
       </header>
       <div className="container">
